@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body>
+    <div class="calculator-container">
+      <div class="calculator-head">
+        <div class="logo"><p>calc</p></div>
+        <div class="toggle">
+          <p>theme</p>
+          <div class="three-state-toggle">
+            <input
+              class="toggle-btn"
+              type="radio"
+              value="theme1"
+              name="toggle"
+              id="one"
+            />
+            <input
+              class="toggle-btn"
+              type="radio"
+              value="theme2"
+              name="toggle"
+              id="two"
+            />
+            <input
+              class="toggle-btn"
+              type="radio"
+              value="theme3"
+              name="toggle"
+              id="three"
+            />
+            <ul class="toggle-num">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="screen">
+        <p id="screen-input">0</p>
+      </div>
+      <div class="keypad-container">
+        <div id="calc-btn" class="item d">del</div>
+        <div id="calc-btn" class="item n">7</div>
+        <div id="calc-btn" class="item n">8</div>
+        <div id="calc-btn" class="item n">9</div>
+        <div id="calc-btn" class="item n">4</div>
+        <div id="calc-btn" class="item n">5</div>
+        <div id="calc-btn" class="item n">6</div>
+        <div id="calc-btn" class="item o">+</div>
+        <div id="calc-btn" class="item n">1</div>
+        <div id="calc-btn" class="item n">2</div>
+        <div id="calc-btn" class="item n">3</div>
+        <div id="calc-btn" class="item o">−</div>
+        <div id="calc-btn" class="item n">.</div>
+        <div id="calc-btn" class="item n">0</div>
+        <div id="calc-btn" class="item o">/</div>
+        <div id="calc-btn" class="item o">×</div>
+        <div id="calc-btn" class="item r">reset</div>
+        <div id="calc-btn" class="item e">=</div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="abdulah-dzankic.netlify.app/">Abdulah Džankić</a>.
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

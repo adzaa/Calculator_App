@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-1-main);
+    font-family: 'Roboto', sans-serif;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+
+    /* theme 1 */
+
+    --bg-1-main: hsl(222, 26%, 31%);
+    --bg-1-keypad: hsl(223, 31%, 20%);
+    --bg-1-screen: hsl(224, 36%, 15%);
+
+    --key-1-del-res-bg: hsl(225, 21%, 49%); /* for reset & delete btn */
+    --key-1-del-res-sw: hsl(224, 28%, 35%);
+
+    --key-1-equal-bg: hsl(6, 63%, 50%); /* equal & toggle btn */
+    --key-1-equal-sw: hsl(6, 70%, 34%);
+
+    --key-1-bg: hsl(30, 25%, 89%); /* key background */
+    --key-1-sw: hsl(28, 16%, 65%);
+
+    --txt-1-nums: hsl(221, 14%, 31%); /* main numbers txt color */
+
+    /* theme 1 end */
+
+    /* theme 2 */
+
+    --bg-2-main: hsl(0, 0%, 90%);
+    --bg-2-keypad: hsl(0, 5%, 81%);
+    --bg-2-screen: hsl(0, 0%, 93%);
+
+    --key-2-del-res-bg: hsl(185, 42%, 37%); /* for reset & delete btn */
+    --key-2-del-res-sw: hsl(185, 58%, 25%);
+
+    --key-2-equal-bg: hsl(25, 98%, 40%);  /* equal & toggle btn */
+    --key-2-equal-sw: hsl(25, 99%, 27%);
+
+    --key-2-bg: hsl(45, 7%, 89%); /* key background */
+    --key-2-sw: hsl(35, 11%, 61%);
+
+    --text-2-nums: hsl(60, 10%, 19%); /* main numbers txt color*/
+
+    /* theme 2 end */
+
+    /* theme 3 */
+
+    --bg-3-main: hsl(268, 75%, 9%);
+    --bg-3-keypad: hsl(268, 71%, 12%); /* & screen, togle */
+
+    --key-3-del-res-bg: hsl(281, 89%, 26%); /* for reset & delete btn */
+    --key-3-del-res-sw: hsl(285, 91%, 52%);
+
+    --key-3-equal-bg: hsl(176, 100%, 44%); /* equal & toggle btn */
+    --key-3-equal-sw: hsl(177, 92%, 70%);
+
+    --key-3-bg: hsl(268, 47%, 21%);  /* key background */
+    --key-3-sw: hsl(290, 70%, 36%);
+
+    --text-3-nums:  hsl(52, 100%, 62%); /* main numbers txt color */
+    --text-3-nums-2:  hsl(198, 20%, 13%);
+}
+
+p {
+    margin: 0 !important;
+}
+
+.calculator-container {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    
+}
+
+.calculator-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.screen {
+    width: 100%;
+    overflow: auto;
+}
+
+.logo p {
+    color: var(--white);
+    font-size: 30px;
+}
+
+.toggle-btn {
+    height: 10px;
+    width: 10px;
+    appearance: none;
+    background-color: var(--key-1-equal-bg);
+    border-radius: 50%;
+    opacity: 0;
+    gap: 10px;
+}
+
+.toggle-btn:hover {
+    cursor: pointer;
+}
+
+.three-state-toggle {
+    border-radius: 50px;
+    background-color: var(--bg-1-screen);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5px;
+    width: 50px;
+}
+
+ .toggle-num {
+    position: absolute;
+    display: flex;
+    gap: 9px;
+    list-style-type: none;
+    font-size: 12px;
+    color: var(--white);
+    top: -20px;
+    right: 6px;
+}
+
+#one {
+    opacity: 1;
+}
+
+.toggle {
+    gap: 20px;
+    display: flex;
+}
+
+.toggle p {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: var(--white)
+}
+
+.screen {
+    background-color: var(--bg-1-screen);
+    height: auto;
+    width: 100%;
+    text-align: right;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.screen p {
+    color: var(--white);
+    font-size: 60px;
+    padding: 20px;
+}
+
+.keypad-container {
+    background-color: var(--bg-1-keypad);
+    height: auto;
+    width: 100%;
+    display: grid;
+    gap: 30px;
+    grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 8px;
+  }
+  
+.item { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: var(--bg-1-keypad);
+    cursor: pointer;
+    background-color: var(--key-1-bg);
+    padding: 10px 0px;
+    font-size: 32px;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0px 3px 3px 0px var(--key-1-sw);
+    -moz-box-shadow: 0px 3px 3px 0px var(--key-1-sw);
+    box-shadow: 0px 3px 3px 0px var(--key-1-sw);
+  }
+  
+.n { grid-area: auto / span 1 / auto / span 1; 
+    color: var(--txt-1-nums);
+    transition: 0.2s;
+
+}
+
+.n:hover, .o:hover {
+    background-color: #fff;
+    transition: 0.2s;
+}
+
+.o { grid-area: auto / span 1 / auto / span 4; 
+    color: var(--txt-1-nums);
+    transition: 0.2s;
+
+}
+.d { grid-area: 1 / 4 / 1 / 4;
+    background-color: var(--key-1-del-res-bg);
+    color: var(--white);
+    -webkit-box-shadow: 0px 3px 3px 0px var(--key-1-del-res-sw);
+    -moz-box-shadow: 0px 3px 3px 0px var(--key-1-del-res-sw);
+    box-shadow: 0px 3px 3px 0px var(--key-1-del-res-sw);
+    transition: 0.2s;
+}
+
+.d:hover, .r:hover {
+    background-color: #a2b3e1;
+    transition: 0.2s;
+}
+
+.e { grid-area: 5 / span 2 / 6 / span 2; 
+    background-color: var(--key-1-equal-bg);
+    color: var(--white);
+    -webkit-box-shadow: 0px 3px 3px 0px var(--key-1-equal-sw);
+    -moz-box-shadow: 0px 3px 3px 0px var(--key-1-equal-sw);
+    box-shadow: 0px 3px 3px 0px var(--key-1-equal-sw);
+    transition: 0.2s;
+
+}
+
+.e:hover {
+    background-color: #f96c5b;
+    transition: 0.2s;
+}
+
+.r { grid-area: 5 / span 2 / 6 / span 2; 
+    background-color: var(--key-1-del-res-bg);
+    color: var(--white);
+    transition: 0.2s;
+
+    -webkit-box-shadow: 0px 3px 3px 0px var(--key-1-del-res-sw);
+    -moz-box-shadow: 0px 3px 3px 0px var(--key-1-del-res-sw);
+    box-shadow: 0px 3px 3px 0px var(--key-1-del-res-sw);
+}
+  
+.attribution {
+    color: var(--white);
+    font-size: 11px;
+    text-align: center;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+}
+
+.attribution a {
+    color: var(--key-1-equal-bg);
+}
