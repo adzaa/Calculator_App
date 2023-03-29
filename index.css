@@ -114,11 +114,11 @@ p {
 
 .toggle-btn {
     height: 10px;
-    width: 10px;
     appearance: none;
     background-color: var(--key-1-equal-bg);
     border-radius: 50%;
     opacity: 0;
+    width: 10px;
     gap: 10px;
 }
 
